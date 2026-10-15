@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NECTIONARY | Computer Device Dictionary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#" id="homeLink"><span class="brand-mark">N</span> NECTIONARY</a>
+  <span class="tagline">Your A–Z computer device dictionary</span>
+</header>
+<main>
+  <section class="hero" id="homeView">
+    <p class="eyebrow">LEARN • EXPLORE • DISCOVER</p>
+    <h1>Computer devices,<br><span>from A to Z.</span></h1>
+    <p class="hero-copy">Choose a category to explore devices and learn what each one does.</p>
+    <div class="category-grid">
+      <button class="category-card processing" data-category="processing"><span class="category-icon">⚙</span><span class="category-title">Processing Devices</span><span class="category-description">Devices that process data and instructions.</span><span class="card-action">Explore category ↗</span></button>
+      <button class="category-card input" data-category="input"><span class="category-icon">⌨</span><span class="category-title">Input Devices</span><span class="category-description">Devices used to send data to a computer.</span><span class="card-action">Explore category ↗</span></button>
+      <button class="category-card output" data-category="output"><span class="category-icon">▣</span><span class="category-title">Output Devices</span><span class="category-description">Devices that present processed information.</span><span class="card-action">Explore category ↗</span></button>
+    </div>
+  </section>
+  <section class="dictionary-view hidden" id="dictionaryView">
+    <button class="back-button" id="backButton">← Back to categories</button>
+    <div class="dictionary-heading"><div><p class="eyebrow">NECTIONARY / A–Z DIRECTORY</p><h1 id="categoryHeading">Input Devices</h1><p id="categoryDescription" class="hero-copy"></p></div><div class="result-count" id="resultCount">0 devices</div></div>
+    <p class="click-hint">Select any device to view its picture and description.</p>
+    <div class="device-grid" id="deviceGrid"></div>
+  </section>
+</main>
+<div class="modal hidden" id="deviceModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <section class="modal-content">
+    <button class="modal-close" id="modalClose" aria-label="Close device details">×</button>
+    <div class="modal-image-wrap"><img id="modalImage" src="" alt=""></div>
+    <div class="modal-body"><p class="eyebrow" id="modalCategory">DEVICE DETAILS</p><h2 id="modalTitle">Device name</h2><p id="modalDescription"></p><div class="modal-example"><strong>Example:</strong> <span id="modalExample"></span>
+  </section>
+</div>
+<footer><span class="footer-brand">NECTIONARY</span><span>Computer devices made easier to understand.</span></footer>
+<script src="script.js"></script>
+</body>
+</html>
